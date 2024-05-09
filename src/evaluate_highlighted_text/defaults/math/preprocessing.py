@@ -24,7 +24,7 @@ rpar = pp.Literal(")")
 factorial_operator = pp.one_of("!")
 unary_operator = pp.one_of("+ -")
 exponentiation_operator = pp.one_of("^ **").add_parse_action(lambda: "**")
-mult_div_operators = pp.one_of("* /")
+mult_div_operators = pp.one_of("* / %")
 add_sub_operators = pp.one_of("+ -")
 
 expression = pp.Forward()
