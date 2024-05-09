@@ -9,15 +9,19 @@ from .preprocessing import preprocess
 
 
 def math(text: str) -> int | float:
-    result = parse_expr(
-        preprocess(text),
-        transformations=(
-            (
-                *standard_transformations,
-                implicit_multiplication_application,
-            )
-        ),
-    ).doit()
+    result = (
+        parse_expr(
+            preprocess(text),
+            transformations=(
+                (
+                    *standard_transformations,
+                    implicit_multiplication_application,
+                )
+            ),
+        )
+        .subs({"e": sp.E})
+        .doit()
+    )
 
     if isinstance(result, sp.Integer):
         return int(result)
