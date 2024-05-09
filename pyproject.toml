@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "evaluate_highlighted_text"
+version = "0.0.1"
+authors = [
+  { name="Gabe Millikan", email="gabe.millikan@gmail.com" },
+]
+description = "An EXTENDABLE program that evaluates highlighted text in-place."
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/GabeMillikan/evaluate-highlighted-text/"
