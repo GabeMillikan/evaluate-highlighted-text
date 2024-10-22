@@ -66,8 +66,7 @@ def preprocess(text: str) -> str:
     return expression.transform_string(text)
 
 
-if __name__ == "__main__":
-
+def run_tests() -> None:
     def test(expr: str, expected: str) -> None:
         actual = preprocess(expr)
 
